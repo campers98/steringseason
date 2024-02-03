@@ -1,0 +1,52 @@
+[03-Feb-24 11:10:09 - INFO] - StringGen - @Stringvsessiond_bot Started.
+[03-Feb-24 11:19:12 - ERROR] - pyrogram.dispatcher - 'BadMsgNotification' object has no attribute 'users'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/pyrogram/dispatcher.py", line 214, in handler_worker
+    await parser(update, users, chats)
+  File "/usr/local/lib/python3.12/site-packages/pyrogram/dispatcher.py", line 90, in callback_query_parser
+    await pyrogram.types.CallbackQuery._parse(self.client, update, users),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pyrogram/types/bots_and_keyboards/callback_query.py", line 101, in _parse
+    message = await client.get_messages(chat_id, message_id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pyrogram/methods/messages/get_messages.py", line 117, in get_messages
+    messages = await utils.parse_messages(self, r, replies=replies)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pyrogram/utils.py", line 92, in parse_messages
+    users = {i.id: i for i in messages.users}
+                              ^^^^^^^^^^^^^^
+AttributeError: 'BadMsgNotification' object has no attribute 'users'
+[03-Feb-24 11:19:12 - ERROR] - pyrogram.dispatcher - 'BadMsgNotification' object has no attribute 'users'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/pyrogram/dispatcher.py", line 214, in handler_worker
+    await parser(update, users, chats)
+  File "/usr/local/lib/python3.12/site-packages/pyrogram/dispatcher.py", line 90, in callback_query_parser
+    await pyrogram.types.CallbackQuery._parse(self.client, update, users),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pyrogram/types/bots_and_keyboards/callback_query.py", line 101, in _parse
+    message = await client.get_messages(chat_id, message_id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pyrogram/methods/messages/get_messages.py", line 117, in get_messages
+    messages = await utils.parse_messages(self, r, replies=replies)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pyrogram/utils.py", line 92, in parse_messages
+    users = {i.id: i for i in messages.users}
+                              ^^^^^^^^^^^^^^
+AttributeError: 'BadMsgNotification' object has no attribute 'users'
+[03-Feb-24 11:19:12 - ERROR] - pyrogram.dispatcher - 'BadMsgNotification' object has no attribute 'updates'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/usr/local/lib/python3.12/site-packages/pyromod/listen/listen.py", line 237, in resolve_future
+    await self.registered_handler(client, message, *args)
+  File "/workspaces/steringseason/StringGen/modules/start.py", line 10, in f_start
+    await message.reply_text(
+  File "/usr/local/lib/python3.12/site-packages/pyrogram/types/messages_and_media/message.py", line 970, in reply_text
+    return await self._client.send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pyrogram/methods/messages/send_message.py", line 168, in send_message
+    for i in r.updates:
+             ^^^^^^^^^
+AttributeError: 'BadMsgNotification' object has no attribute 'updates'
+[03-Feb-24 11:19:18 - INFO] - root - Stop signal received (SIGTERM). Exiting...
+[03-Feb-24 11:19:31 - INFO] - StringGen - @Stringvsessiond_bot Started.
